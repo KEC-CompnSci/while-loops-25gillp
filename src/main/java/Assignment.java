@@ -25,7 +25,14 @@ public class Assignment {
         // Use a while loop to build a string that repeats the word
         // Words should be separated by single spaces
         // No trailing space at the end
-        return "test";
+        String repeatedWord = "";
+        
+        while (times != 0) {
+          repeatedWord += word + " ";
+          times -= 1;
+        }
+        return repeatedWord;
+
 
     
     }
@@ -44,7 +51,22 @@ public class Assignment {
         // - Outer loop for each row
         // - Inner loop to repeat the number
         // Use \n for newlines
-        return "";
+        String numPyramid = "";
+        int currentNum = 1;
+        int printAmount = 1;
+
+        while (currentNum <= maxNumber){
+          while (printAmount <= currentNum){
+            numPyramid += currentNum;
+            printAmount += 1;
+          }
+          
+          numPyramid += "\n";
+          currentNum += 1;
+          printAmount = 1;
+        }
+      
+        return String.valueOf(numPyramid);
     }
     
  
@@ -64,7 +86,23 @@ public class Assignment {
         // Use string concatenation
         // Numbers/words should be separated by spaces
         // No trailing space at the end
-        return "";
+         int count = 1;
+        String countTo = "";
+        
+        while (count <= maxNumber){
+          if (count % 3 == 0 && count % 5 == 0){
+            countTo = countTo + "FizzBuzz ";
+          } else if (count % 3 == 0){
+            countTo = countTo + "Fizz ";
+          } else if (count % 5 == 0){
+            countTo = countTo + "Buzz ";
+          } else {
+            countTo = countTo + count + " ";
+          }
+          count += 1;
+        }
+      
+        return countTo;
     }
     
   
